@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from 'react';
 
-// reducer - used to update the state based on the action
+// 5. reducer - used to update the state based on the action
 export const AppReducer = (state, action) => {
     let new_expenses = [];
     switch(action.type) {
