@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from 'react';
 
-// 5. reducer - used to update the state based on the action
+// 5. reducer - updates the state based on the action
 export const AppReducer = (state, action) => {
     let new_expenses = [];
     switch(action.type) {
@@ -74,7 +74,7 @@ const initialState = {
     location: '$'
 };
 
-// 2. context - imported by components and used to get the state
+// 2. context - imported by components and gets the state
 export const AppContext = createContext();
 
 // 3. provider component - wraps the components we want to give context to the state
