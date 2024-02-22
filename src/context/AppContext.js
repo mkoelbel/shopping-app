@@ -94,7 +94,7 @@ export const AppProvider = (props) => {
                 expenses: state.expenses,
                 CartValue: state.CartValue,
                 dispatch,
-                Location: state.Location
+                location: state.location
             }}
         >
             {props.children}
