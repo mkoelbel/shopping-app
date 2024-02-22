@@ -65,20 +65,20 @@ export const AppReducer = (state, action) => {
 // 1. initial state - when the app loads
 const initialState = {
     expenses: [
-        { id: 'shirt', name: 'Shirt', quantity: 0, unitPrice = 24 },
-        { id: 'jeans', name: 'Jeans', quantity: 0, unitPrice = 24 },
-        { id: 'dress', name: 'Dress', quantity: 0, unitPrice = 42 },
-        { id: 'dinner_set', name: 'Dinner Set', quantity: 0, unitPrice = 60 },
-        { id: 'bag', name: 'Bag', quantity: 0, unitPrice = 12 }
+        { id: 'shirt', name: 'Shirt', quantity: 0, unitPrice: 24 },
+        { id: 'jeans', name: 'Jeans', quantity: 0, unitPrice: 24 },
+        { id: 'dress', name: 'Dress', quantity: 0, unitPrice: 42 },
+        { id: 'dinner_set', name: 'Dinner Set', quantity: 0, unitPrice: 60 },
+        { id: 'bag', name: 'Bag', quantity: 0, unitPrice: 12 }
     ],
     location: '$'
 };
 
-// 2. context - imported by components and gets the state
+// 2. context - imported by components to get the state
 export const AppContext = createContext();
 
-// 3. provider component - wraps the components we want to give context to the state
-// accepts the children (nested/wrapped components)
+// 3. provider - wraps the components which need access to the state
+// accepts children (nested/wrapped components)
 export const AppProvider = (props) => {
     // 4. app state - takes reducer and initial state
     const [state, dispatch] = useReducer(AppReducer, initialState);
